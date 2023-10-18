@@ -1,0 +1,3 @@
+https://mystery.knightlab.com/ -- Spiel zum üben
+https://www.microsoft.com/de-de/sql-server/sql-server-downloads -- Download von kostenlosem on premise SQL Server (2019) von Microsoft für lokale Installation
+https://www.w3schools.com/sql/ -- Übersicht und Tutorials zu den gängigsten SQL Befehlen

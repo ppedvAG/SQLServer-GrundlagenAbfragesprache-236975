@@ -8,6 +8,8 @@ Vor- & Nachmittags 15 min Kaffeepause
 Mittagspause ca. 12:30 Uhr für 1h
 
 
+MailKontakt: seidel.nico93@gmail.com; gerne mal schreiben ;-)
+
 
 Agenda:
 
@@ -32,17 +34,7 @@ Stored Procedures
 CASE
 Temporäre Tabellen
 Unterabfragen
-
 WHILE
 IF Statements
-CTEs
-(Datenbanken 101)
-
-
-
-
-
-
-
 
 */

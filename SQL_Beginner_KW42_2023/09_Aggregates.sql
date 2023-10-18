@@ -21,6 +21,14 @@ SELECT CustomerID, SUM(Freight) FROM Orders
 
 --Lösung über GROUP BY:
 
+/******************************************/
+
+--GROUP BY - erstellt "Gruppen" nach denen Aggregate gebildet werden sollen; syntaktisch nach WHERE
+
+
+/******************************************/
+
+
 --Freight Summe pro CustomerID:
 SELECT CustomerID, SUM(Freight) as Summe FROM Orders
 GROUP BY CustomerID
@@ -58,6 +66,7 @@ SELECT CompanyName, Country, City, EmployeeID, COUNT(EmployeeID) as SummeFreight
 JOIN Orders ON Customers.CustomerID = Orders.CustomerID
 GROUP BY CompanyName, Country, City, EmployeeID
 
+
 --Vorsicht beim Gruppieren! Wenn Order Details dabei ist, sind die Freight Summen zu hoch!
 SELECT FirstName + ' ' + LastName as Mitarbeiter, SUM(Freight) as FreightSumme FROM Customers
 JOIN Orders ON Customers.CustomerID = Orders.CustomerID
@@ -81,6 +90,7 @@ JOIN Orders ON Orders.EmployeeID = Employees.EmployeeID
 GROUP BY LastName
 ORDER BY 2 DESC
 
+/******************************************/
 
 --Verkaufte Stückzahlen pro Produkt, aber nur über 1000
 --Geht so nicht:
@@ -91,6 +101,13 @@ GROUP BY ProductName
 ORDER BY SummeStückzahl DESC
 
 --Lösung über HAVING:
+
+/******************************************/
+
+--HAVING - wie WHERE, aber funktioniert auch für aggregierte Werte; syntaktisch nach GROUP BY
+
+/******************************************/
+
 SELECT ProductName as Produkt, SUM(Quantity) as SummeStückzahl FROM [Order Details]
 JOIN Products ON Products.ProductID = [Order Details].ProductID
 GROUP BY ProductName
@@ -98,7 +115,6 @@ HAVING SUM(Quantity) > 1000
 ORDER BY SummeStückzahl DESC
 
 --HAVING funktioniert 1 zu 1 wie WHERE, kann aber gruppierte/aggregierte Werte nachträglich filtern
-
 --Aber: Nur HAVING verwenden wenn im WHERE nicht möglich!!!
 
 SELECT CompanyName, Country, City, SUM(Freight) as SummeFreight FROM Customers 
@@ -110,7 +126,6 @@ SELECT CompanyName, Country, City, SUM(Freight) as SummeFreight FROM Customers
 JOIN Orders ON Customers.CustomerID = Orders.CustomerID
 WHERE Country = 'Germany'
 GROUP BY CompanyName, Country, City
-
 
 --Rechnungen vorbereiten:
 

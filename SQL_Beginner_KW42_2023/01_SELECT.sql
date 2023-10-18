@@ -4,7 +4,7 @@ bis geschlossen wird */
 
 --einzeiliger Kommentar ab "--"
 
---Richtige Datenbank ansprechen (per Dropdown Menü oben rechts oder per USE Datenbankname Befehl)
+--Richtige Datenbank ansprechen (per Dropdown Menü oben links oder per USE Datenbankname Befehl)
 USE Northwind
 
 -- "*" bedeuetet ALLE Spalten die vorhanden sind

@@ -56,6 +56,7 @@ SELECT * FROM Customers
 WHERE Country = 'Germany'
 
 --EXCEPT = "Zeige mir alle Datensätze aus Abfrage 1, die NICHT ebenfalls in Abfrage 2 auftauchen"
+
 SELECT * FROM Customers
 EXCEPT
 SELECT * FROM Customers
